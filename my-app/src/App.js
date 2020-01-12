@@ -1,21 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Friends from './Friends.js';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Button,Form, FormControl,Row,Container,Col } from 'react-bootstrap';
-import {Sigma, RandomizeNodePositions,LoadGEXF,Filter,ForceAtlas2,SigmaEnableWebGL, RelativeSize, LoadJSON, EdgeShapes, NodeShapes} from 'react-sigma';
+import Graph from './Graph.js';
+import { Navbar,Container,Row,Col} from 'react-bootstrap';
+import { Sigma, SigmaEnableWebGL,RelativeSize } from 'react-sigma'
+
 
 
 function App() {
+  
   return (
    
   <div className="App">
     <Navbar className="navbar_bg">
     <Navbar.Brand className="brand">Graph Visualization</Navbar.Brand>
     </Navbar>
-    
-      <Friends></Friends>
+    <Container>
+      <Row>
+      <Col>
+      </Col>
+      <Col className="Col-size">
+        <Graph></Graph>
+      </Col>
+      <Col>
+      </Col>
+      </Row>
+    </Container>
+      
 
     <Navbar fixed="bottom" className="footer" />
  </div>
