@@ -6,7 +6,7 @@ function Graph() {
 
  let myGraph = {
     nodes: [
-      { id: "n1", label: "Aditya"},
+      { id: "n1", label: "Harry"},
       { id: "n2", label: "Ronald"},
       { id: "n3", label: "Hermoine"},
       { id: "n4", label: "Prof. Snape"},
@@ -80,11 +80,13 @@ function Graph() {
     defaultNodeColor: '#58D68D',
     defaultEdgeColor: '#515A5A ',
     drawLabels:true,
-    labelHoverColor:"red",
-    drawEdgeLabels:true,
-    minArrowSize:0,
     labelColor:'blue',
     clone:false,
+    labelThreshold: 0,
+    edgeLabelSize: 'proportional',
+    minArrowSize: 10,
+    batchEdgesDrawing:true,
+    
          
   };
 

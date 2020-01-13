@@ -4,7 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Graph from './Graph.js';
 import { Navbar,Container,Row,Col} from 'react-bootstrap';
-import {Sigma,LoadJSON, RelativeSize,EdgeShapes,NodeShapes} from 'react-sigma';
+
 
 
 function App() {
