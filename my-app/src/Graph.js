@@ -6,7 +6,7 @@ function Graph() {
 
  let myGraph = {
     nodes: [
-      { id: "n1", label: "Harry"},
+      { id: "n1", label: "Aditya"},
       { id: "n2", label: "Ronald"},
       { id: "n3", label: "Hermoine"},
       { id: "n4", label: "Prof. Snape"},
@@ -15,7 +15,8 @@ function Graph() {
       { id: "n7", label: "Magonigal"},
       { id: "n8", label: "Fred"},
       { id: "n9", label: "George"},
-      { id: "n10", label: "Ginny"}
+      { id: "n10", label: "Ginny"},
+      { id: "n11", label: "Cat"}
     ],
     // edge labels and types are optional
     edges: [
@@ -69,30 +70,29 @@ function Graph() {
       { id:"e44",source: "n8", target:"n9", label: "Twin"},
       { id:"e45",source: "n8", target:"n10", label: "Brother"},
       { id:"e46",source: "n9", target:"n10", label: "Brother"}
-    ]
+      ]
     
   };
   let settings= {
     
     edgeColor:'cyan',
     nodeColor: 'red',
-    defaultNodeColor: 'red',
-    defaultEdgeColor: 'cyan',
+    defaultNodeColor: '#58D68D',
+    defaultEdgeColor: '#515A5A ',
     drawLabels:true,
     labelHoverColor:"red",
     drawEdgeLabels:true,
     minArrowSize:0,
     labelColor:'blue',
     clone:false,
-    labelThreshold:8
-      
+         
   };
 
-  let styles = {width:"900px", height:"200px"};
+  let styles = {width:"1000px", height:"500px"};
  
    
  
-    //let myGraph = {nodes:[{id:"n1", label:"Alice", color:"blue"}, {id:"n2", label:"Rabbit",color:"red"},{id:"n3", label:"Aditya", color:"green"}], edges:[{id:"e1",source:"n1",target:"n2",label:"SEES"},{id:"e2",source:"n3",target:"n2",label:"SEES"}]}
+    
     return(
       <Sigma graph={myGraph} settings={settings} style={styles}>
         <RelativeSize initialSize={8}/>

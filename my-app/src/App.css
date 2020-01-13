@@ -3,7 +3,7 @@
 /* custom css */
 .navbar_bg{
 
-  background: linear-gradient(#f00000,#dc281e);
+  background: #090909;
   color: white;
 
 }
@@ -16,7 +16,7 @@
 }
 .footer{
 
-  background: #904e95;
+  background:#131313;
   height: 50px;
 
 }
@@ -26,4 +26,10 @@
   margin-top: 50px;
   margin-left: auto;
 
+}
+.graph_div
+{
+  margin: 0 auto !important;
+  margin-left: 0 auto !important;
+  
 }
