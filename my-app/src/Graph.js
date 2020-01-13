@@ -6,46 +6,95 @@ function Graph() {
 
  let myGraph = {
     nodes: [
-      { id: "a", label: "cat"},
-      { id: "b", label: "dog"},
-      { id: "c", label: "mouse"},
-      { id: "d", label: "duck"}
+      { id: "n1", label: "Harry"},
+      { id: "n2", label: "Ronald"},
+      { id: "n3", label: "Hermoine"},
+      { id: "n4", label: "Prof. Snape"},
+      { id: "n5", label: "Prof.Dumbledore"},
+      { id: "n6", label: "DarkLord"},
+      { id: "n7", label: "Magonigal"},
+      { id: "n8", label: "Fred"},
+      { id: "n9", label: "George"},
+      { id: "n10", label: "Ginny"}
     ],
     // edge labels and types are optional
     edges: [
-      { id:"e1",source: "a", target:"b", label: "friend", type: 'arrow'},
-      { id:"e2",source: "a", target:"c", label: "pet", type: 'arrow'},
-      { id:"e3",source: "a", target:"d", label: "mother", type: 'arrow' },
-      { id:"e4",source: "b", target:"c", label: "father", type: 'arrow' },
-      { id:"e5",source: "b", target:"d", label: "uncle", type: 'arrow' },
-      { id:"e6",source: "c", target:"d", label: "uncle", type: 'arrow' }
+     
+      { id:"e1",source: "n1", target:"n2", label:"friend"},
+      { id:"e2",source: "n1", target:"n3", label:"friend"},
+      { id:"e3",source: "n1", target:"n4", label:"Student"},
+      { id:"e4",source: "n1", target:"n5", label:"Student"},
+      { id:"e5",source: "n1", target:"n6", label:"Enemy"},
+      { id:"e6",source: "n1", target:"n7", label:"Student"},
+      { id:"e7",source: "n1", target:"n8", label:"friend"},
+      { id:"e8",source: "n1", target:"n9", label:"friend"},
+      { id:"e9",source: "n1", target:"n10", label:"friend"},
+     
+      { id:"e10",source: "n2", target:"n3", label:"friend"},
+      { id:"e11",source: "n2", target:"n4", label:"Student"},
+      { id:"e12",source: "n2", target:"n5", label:"Student"},
+      { id:"e13",source: "n2", target:"n6", label:"Enemy"},
+      { id:"e14",source: "n2", target:"n7", label:"Student"},
+      { id:"e15",source: "n2", target:"n8", label: "brother"},
+      { id:"e16",source: "n2", target:"n10", label: "brother"},
+      { id:"e17",source: "n2", target:"n9", label: "brother"},
+     
+      { id:"e18",source: "n3", target:"n4", label: "Student"},
+      { id:"e19",source: "n3", target:"n5", label: "Student"},
+      { id:"e20",source: "n3", target:"n6", label: "Enemy"},
+      { id:"e21",source: "n3", target:"n7", label: "Student"},
+      { id:"e22",source: "n3", target:"n8", label: "friend"},
+      { id:"e23",source: "n3", target:"n9", label: "friend"},
+      { id:"e24",source: "n3", target:"n10", label: "friend"},
+     
+      { id:"e25",source: "n4", target:"n5", label: "Professor"},
+      { id:"e26",source: "n4", target:"n6", label: "Enemy or Friend"},
+      { id:"e27",source: "n4", target:"n7", label: "Colleague"},
+      { id:"e28",source: "n4", target:"n8", label: "student"},
+      { id:"e29",source: "n4", target:"n9", label: "student"},
+      { id:"e30",source: "n4", target:"n10", label: "student"},
+
+      { id:"e31",source: "n5", target:"n6", label: "Professor"},
+      { id:"e32",source: "n5", target:"n7", label: "Headmaster"},
+      { id:"e34",source: "n5", target:"n8", label: "Headmaster"},
+      { id:"e35",source: "n5", target:"n9", label: "Headmaster"},
+      { id:"e36",source: "n5", target:"n10", label: "Headmaster"},
+      { id:"e37",source: "n6", target:"n7", label: "Student"},
+      { id:"e38",source: "n6", target:"n8", label: "Hogwarts"},
+      { id:"e39",source: "n6", target:"n9", label: "Hogwarts"},
+      { id:"e40",source: "n6", target:"n10", label: "Hogwarts"},
+      { id:"e41",source: "n7", target:"n8", label: "Professor"},
+      { id:"e42",source: "n7", target:"n9", label: "Professor"},
+      { id:"e43",source: "n7", target:"n10", label: "Professor"},
+      { id:"e44",source: "n8", target:"n9", label: "Twin"},
+      { id:"e45",source: "n8", target:"n10", label: "Brother"},
+      { id:"e46",source: "n9", target:"n10", label: "Brother"}
     ]
     
   };
   let settings= {
-    edgeColor:'red',
-    nodeColor: '#00dd00',
-    defaultNodeColor: '#00dd00',
-    defaultEdgeColor: '#dbc09b',
+    
+    edgeColor:'cyan',
+    nodeColor: 'red',
+    defaultNodeColor: 'red',
+    defaultEdgeColor: 'cyan',
     drawLabels:true,
     labelHoverColor:"red",
     drawEdgeLabels:true,
     minArrowSize:0,
     labelColor:'blue',
-    defaultEdgeLabelSize: 10,
-    defaultEdgeType: 'curve',
-    drawNodes: 5,
-    scalingMode: 'inside',
-    arrowRatio: 3,
-    edgeLabelSize: 'proportional'
-    
+    clone:false,
+    labelThreshold:8
+      
   };
+
+  let styles = {width:"900px", height:"200px"};
  
    
  
     //let myGraph = {nodes:[{id:"n1", label:"Alice", color:"blue"}, {id:"n2", label:"Rabbit",color:"red"},{id:"n3", label:"Aditya", color:"green"}], edges:[{id:"e1",source:"n1",target:"n2",label:"SEES"},{id:"e2",source:"n3",target:"n2",label:"SEES"}]}
     return(
-      <Sigma graph={myGraph} settings={settings} >
+      <Sigma graph={myGraph} settings={settings} style={styles}>
         <RelativeSize initialSize={8}/>
         <RandomizeNodePositions/>
       </Sigma>

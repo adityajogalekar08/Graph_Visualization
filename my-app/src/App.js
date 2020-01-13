@@ -18,19 +18,9 @@ function App() {
     </Navbar>
     <Container>
       <Row>
-      <Col>
-      </Col>
-      <Col className="Col-size" id="test">
-       
-          <Graph></Graph>
-
-      </Col>
-      <Col>
-      </Col>
+        <Graph></Graph>
       </Row>
     </Container>
-      
-
     <Navbar fixed="bottom" className="footer" />
  </div>
   );
