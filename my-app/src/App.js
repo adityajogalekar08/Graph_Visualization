@@ -2,9 +2,8 @@ import React from 'react';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Friends from './Friends.js';
 import Graph from './Graph.js';
-import { Navbar,Container,Row,Col} from 'react-bootstrap';
+import { Navbar,Container,Row,Col,Nav,Button} from 'react-bootstrap';
 import { Sigma, SigmaEnableWebGL,RelativeSize } from 'react-sigma'
 
 
@@ -21,8 +20,10 @@ function App() {
       <Row>
       <Col>
       </Col>
-      <Col className="Col-size">
-        <Graph></Graph>
+      <Col className="Col-size" id="test">
+       
+          <Graph></Graph>
+
       </Col>
       <Col>
       </Col>
