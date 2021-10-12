@@ -9,7 +9,7 @@ idna==2.8
 lmdb==0.94
 mxnet==1.4.0.post0
 numpy==1.14.6
-opencv-python==4.1.0.25
+opencv-python==4.2.0.32
 pycurl==7.43.0
 python-apt==1.1.0b1+ubuntu0.16.4.5
 PyYAML==5.1
