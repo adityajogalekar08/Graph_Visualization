@@ -8,7 +8,7 @@ h5py==2.9.0
 idna==2.8
 lmdb==0.94
 mxnet==1.4.0.post0
-numpy==1.14.6
+numpy==1.22.0
 opencv-python==4.1.0.25
 pycurl==7.43.0
 python-apt==1.1.0b1+ubuntu0.16.4.5
